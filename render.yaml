@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: azkar-together
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: GROUP_CHAT_ID
+        sync: false
+      - key: AHMED_USERNAME
+        value: Cruyff_09
+      - key: JANNA_USERNAME
+        value: AMG02266
+      - key: TIMEZONE
+        value: Asia/Riyadh
+      - key: DATABASE_PATH
+        value: bot.db
+      - key: PORT
+        value: "10000"
+      - key: QURAN_API_BASE_URL
+        value: https://api.alquran.cloud/v1
+      - key: QURAN_EDITION
+        value: quran-uthmani
+      - key: QURAN_DAILY_PAGES
+        value: "10"
+      - key: QURAN_FIRST_PAGE
+        value: "1"
+      - key: QURAN_TOTAL_PAGES
+        value: "604"
+      - key: MULK_AUDIO_FILE_ID
+        sync: false
+      - key: SLEEP_AUDIO_FILE_ID
+        sync: false
